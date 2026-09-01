@@ -7,7 +7,7 @@
 
 - 実在する事務所名・実在の数値（実際の料金相場・実績件数など）・実在サイトの分析結果をこのリポジトリに含めない。参考にした実在サイトのパターンは「型」として抽象化してから使い、文章・数値をそのまま転記しない。
 - 各ページのフッターにある架空事務所の注記（「本サイトはWeb制作ポートフォリオ用に作成した架空の事務所です。実在の団体・個人とは関係ありません。」）を削除・弱化しない。
-- `compare.html` / `compare-shosai.html` / `kintsugi-repair.css` / `kintsugi-ogp.png`（別演習「kintsugi」の前後比較ツール）には触れない。
+- `compare.html` / `compare-shosai.html` / `kintsugi-ogp.png`（別演習「kintsugi」の前後比較ツール）には触れない。なお`kintsugi-repair.css`という独立ファイルは存在せず、実体は`compare.html`/`compare-shosai.html`内のインライン`<style id="kintsugi-repair">`要素。
 
 ## 想定ペルソナ
 
