@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-faq" class="page active" data-page="faq">
       <div class="section container">
@@ -150,42 +147,42 @@
         <div class="faq-list">
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">相談だけでも大丈夫ですか。費用はかかりますか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">相談だけでも大丈夫ですか。費用はかかりますか。</span></summary>
             <div class="faq-a">初回のご相談とお見積りは無料です。ご相談だけで終わっていただいても構いません。正式にご依頼いただくまで、費用は一切かかりません。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">鑑定書ができるまで、どのくらいかかりますか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">鑑定書ができるまで、どのくらいかかりますか。</span></summary>
             <div class="faq-a">物件の種類によりますが、更地や戸建てで2〜3週間が目安です。物件ごとの目安は<a href="flow.html#lead-time" class="faq-inline">ご相談の流れ</a>の納期表をご覧ください。お急ぎの場合はご相談ください。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">費用はどうやって決まるのですか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">費用はどうやって決まるのですか。</span></summary>
             <div class="faq-a">①物件の種類 ②規模 ③権利関係の複雑さ ④現地調査に必要な日数、の4つで決まります。着手前に金額を確定してお伝えし、あとから追加費用をいただくことはありません。目安の金額は<a href="services.html" class="faq-inline">支援内容・料金</a>に掲載しています。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">不動産会社の無料査定とは何が違うのですか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">不動産会社の無料査定とは何が違うのですか。</span></summary>
             <div class="faq-a">査定は「売るための価格の目安」で、多くは無料です。鑑定評価は「適正な時価がいくらかを、第三者が国の基準にもとづいて示す証明」で、有料のかわりに裁判所や税務署へ提出できます。売るだけなら査定で十分ですが、分ける・争う・申告する場面では鑑定評価が必要です。項目ごとの違いは<a href="index.html#compare" class="faq-inline">トップページの比較表</a>にまとめています。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">どんな資料を用意すればいいですか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">どんな資料を用意すればいいですか。</span></summary>
             <div class="faq-a">登記事項証明書、公図、測量図、建物図面、固定資産税の納税通知書などです。お手元にないものは当方で取得できますので、まずはお持ちのものだけで結構です。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">遠方の物件でも対応できますか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">遠方の物件でも対応できますか。</span></summary>
             <div class="faq-a">東京・神奈川・埼玉・千葉が中心ですが、それ以外の地域もご相談ください。交通費が別途かかる場合は、事前にお見積りへ含めてお伝えします。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">相続税の申告に使えますか。税理士とも連携できますか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">相続税の申告に使えますか。税理士とも連携できますか。</span></summary>
             <div class="faq-a">相続税申告では、原則として路線価等をもとに評価します。鑑定評価は、その評価額が実態に合わない場合の裏付け資料として使う形が一般的です。申告への使い方は顧問税理士の方と相談しながら進めますので、打ち合わせにも同席可能です。税理士をお探しの場合は、ご紹介もできます。</div>
           </details>
 
           <details class="faq-item">
-            <summary><svg class="faq-toggle"><use href="#icon-plus"></use></svg><span class="faq-q">裁判所に提出できますか。</span></summary>
+            <summary><svg class="faq-toggle" aria-hidden="true"><use href="#icon-plus"></use></svg><span class="faq-q">裁判所に提出できますか。</span></summary>
             <div class="faq-a">調停・訴訟に提出できる正式な鑑定評価書を作成します。弁護士の方からのご依頼も承っています。</div>
           </details>
 
@@ -198,7 +195,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

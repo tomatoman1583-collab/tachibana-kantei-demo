@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-cases" class="page active" data-page="cases">
       <div class="section container">
@@ -148,14 +145,14 @@
           <p class="section-sub">どんな場面で、どのように鑑定評価が使われているのか。代表的な6件をご紹介します。</p>
         </div>
         <p class="cases-notice">
-          <svg><use href="#icon-info"></use></svg>
+          <svg aria-hidden="true"><use href="#icon-info"></use></svg>
           <span>このページに掲載している事例は、すべて架空の設定です。実際のご依頼内容ではありません。</span>
         </p>
         <div class="case-grid">
 
           <article class="case-card">
             <span class="service-tag">相続</span>
-            <h3>路線価では納得できなかった実家の分割</h3>
+            <h2>路線価では納得できなかった実家の分割</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>60代 男性（3人きょうだいの長男）</dd>
               <dt>状況</dt><dd>父が残した実家（戸建て）を、離れて暮らすきょうだい3人で分けることに。長男が住み続け、他の2人へ代償金を支払う案が出ていた。</dd>
@@ -167,7 +164,7 @@
 
           <article class="case-card">
             <span class="service-tag">離婚</span>
-            <h3>査定額が3社で800万円開いた自宅マンション</h3>
+            <h2>査定額が3社で800万円開いた自宅マンション</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>40代 女性</dd>
               <dt>状況</dt><dd>夫婦共有名義の自宅マンション。財産分与の話し合いのため、それぞれが不動産会社に査定を依頼していた。</dd>
@@ -179,7 +176,7 @@
 
           <article class="case-card">
             <span class="service-tag">売却前</span>
-            <h3>業者からの購入申し出が妥当か分からない</h3>
+            <h2>業者からの購入申し出が妥当か分からない</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>50代 男性</dd>
               <dt>状況</dt><dd>相続した土地に、不動産会社から「この金額で買いたい」と申し出があった。</dd>
@@ -191,7 +188,7 @@
 
           <article class="case-card">
             <span class="service-tag">借地・底地</span>
-            <h3>借地権割合の認識が食い違っていた土地</h3>
+            <h2>借地権割合の認識が食い違っていた土地</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>70代 男性（地主）</dd>
               <dt>状況</dt><dd>先代から続く借地について、借地人から底地の買い取りを打診された。</dd>
@@ -203,7 +200,7 @@
 
           <article class="case-card">
             <span class="service-tag">法人</span>
-            <h3>グループ会社間の土地売買と税務上の時価</h3>
+            <h2>グループ会社間の土地売買と税務上の時価</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>不動産賃貸業（同族会社）のご担当者</dd>
               <dt>状況</dt><dd>グループ内の2社の間で、事業用の土地を売買する計画があった。</dd>
@@ -215,7 +212,7 @@
 
           <article class="case-card">
             <span class="service-tag">士業連携</span>
-            <h3>共有物分割訴訟で評価額が争点になった案件</h3>
+            <h2>共有物分割訴訟で評価額が争点になった案件</h2>
             <dl class="case-dl">
               <dt>ご依頼主</dt><dd>弁護士（共有物分割訴訟の代理人）</dd>
               <dt>状況</dt><dd>共有名義の土地をめぐる訴訟で、対象不動産の評価額が争点になっていた。</dd>
@@ -234,7 +231,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

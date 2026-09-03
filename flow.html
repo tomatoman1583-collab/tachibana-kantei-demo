@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-flow" class="page active" data-page="flow">
       <div class="section container">
@@ -150,43 +147,43 @@
         <div class="flow-list">
           <div class="flow-step">
             <span class="flow-num">STEP 1</span>
-            <svg class="flow-icon"><use href="#icon-mail"></use></svg>
-            <h3>お問い合わせ</h3>
+            <svg class="flow-icon" aria-hidden="true"><use href="#icon-mail"></use></svg>
+            <h2>お問い合わせ</h2>
             <p>電話またはフォームからご連絡ください。ご相談の概要をお伺いします。</p>
             <span class="flow-duration">当日〜翌営業日中に返信</span>
           </div>
           <div class="flow-step">
             <span class="flow-num">STEP 2</span>
-            <svg class="flow-icon"><use href="#icon-hearing"></use></svg>
-            <h3>ヒアリング</h3>
+            <svg class="flow-icon" aria-hidden="true"><use href="#icon-hearing"></use></svg>
+            <h2>ヒアリング</h2>
             <p>ご相談の背景、物件の状況、鑑定書の用途を詳しくお伺いします。ご用意いただく資料は下記のとおりです。</p>
             <span class="flow-duration">オンライン・対面どちらも可</span>
           </div>
           <div class="flow-step">
             <span class="flow-num">STEP 3</span>
-            <svg class="flow-icon"><use href="#icon-pin"></use></svg>
-            <h3>現地調査</h3>
+            <svg class="flow-icon" aria-hidden="true"><use href="#icon-pin"></use></svg>
+            <h2>現地調査</h2>
             <p>対象不動産の現地を調査し、周辺相場・法的規制等を確認します。</p>
             <span class="flow-duration">所要1〜2時間程度</span>
           </div>
           <div class="flow-step">
             <span class="flow-num">STEP 4</span>
-            <svg class="flow-icon"><use href="#icon-report"></use></svg>
-            <h3>鑑定書作成</h3>
+            <svg class="flow-icon" aria-hidden="true"><use href="#icon-report"></use></svg>
+            <h2>鑑定書作成</h2>
             <p>収集した資料をもとに評価を行います。途中で概算の評価額を中間報告としてお伝えし、そのうえで鑑定評価書を仕上げます。</p>
             <span class="flow-duration">中間報告のあと、おおむね1〜2週間</span>
           </div>
           <div class="flow-step">
             <span class="flow-num">STEP 5</span>
-            <svg class="flow-icon"><use href="#icon-delivery"></use></svg>
-            <h3>納品</h3>
+            <svg class="flow-icon" aria-hidden="true"><use href="#icon-delivery"></use></svg>
+            <h2>納品</h2>
             <p>完成した鑑定書をご説明のうえお渡しします。提出先ごとの使い方もご案内します。</p>
             <span class="flow-duration">面談または郵送</span>
           </div>
         </div>
 
         <div id="lead-time" class="sub-block">
-          <h3>納期の目安</h3>
+          <h2>納期の目安</h2>
           <div class="table-scroll">
             <table class="fee-table">
               <thead>
@@ -204,13 +201,13 @@
         </div>
 
         <div class="sub-block">
-          <h3>STEP 2でご用意いただく資料</h3>
+          <h2>STEP 2でご用意いただく資料</h2>
           <ul class="doc-list">
-            <li><svg><use href="#icon-check"></use></svg><span>登記事項証明書（登記簿謄本）</span></li>
-            <li><svg><use href="#icon-check"></use></svg><span>公図・測量図</span></li>
-            <li><svg><use href="#icon-check"></use></svg><span>建物図面</span></li>
-            <li><svg><use href="#icon-check"></use></svg><span>固定資産税の納税通知書</span></li>
-            <li><svg><use href="#icon-check"></use></svg><span>賃貸中の場合は賃貸借契約書</span></li>
+            <li><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>登記事項証明書（登記簿謄本）</span></li>
+            <li><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>公図・測量図</span></li>
+            <li><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>建物図面</span></li>
+            <li><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>固定資産税の納税通知書</span></li>
+            <li><svg aria-hidden="true"><use href="#icon-check"></use></svg><span>賃貸中の場合は賃貸借契約書</span></li>
           </ul>
           <p class="fee-note">お手元にないものは当方で取得できます。まずはお持ちのものだけで結構です。</p>
         </div>
@@ -222,7 +219,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

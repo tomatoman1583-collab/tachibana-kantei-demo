@@ -10,7 +10,7 @@
 
 | ページ | 内容 |
 |---|---|
-| [トップ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/) | ヒーロー・よくある3つのご相談・想定する依頼者・査定と鑑定評価の違い・選ばれる理由・ビフォーアフタースライダー |
+| [トップ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/) | ヒーロー・よくある3つのご相談・想定する依頼者・査定と鑑定評価の違い・選ばれる理由 |
 | [支援内容・料金](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/services.html) | 3メニューの内容と料金目安 |
 | [解決事例](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/cases.html) | 架空設定の解決事例6件 |
 | [ご相談の流れ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/flow.html) | 5ステップと納期の目安・必要書類 |

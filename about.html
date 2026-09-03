@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-about" class="page active" data-page="about">
       <div class="section container">
@@ -148,13 +145,13 @@
         </div>
         <div class="about-grid">
           <div class="profile-card">
-            <svg class="profile-figure"><use href="#icon-person"></use></svg>
+            <svg class="profile-figure" aria-hidden="true"><use href="#icon-person"></use></svg>
             <p class="profile-name">橘 一真</p>
             <p class="profile-role">たちばな かずま／不動産鑑定士</p>
             <p class="profile-quote">「感情が絡む場面だからこそ、数字と根拠で納得できる答えを。」</p>
           </div>
           <div class="about-bio">
-            <h3>経歴</h3>
+            <h2>経歴</h2>
             <p>大手不動産鑑定会社にて15年間、相続・訴訟にかかわる鑑定評価に従事。2020年、たちばな不動産鑑定事務所を開設。以来、個人のお客様からの相続・財産分与・売却前のご相談を中心に対応しています。</p>
             <div class="stat-grid">
               <div class="stat-item">
@@ -171,28 +168,28 @@
               </div>
             </div>
             <ul class="qual-list">
-              <li><svg><use href="#icon-check"></use></svg>不動産鑑定士</li>
-              <li><svg><use href="#icon-check"></use></svg>宅地建物取引士</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>不動産鑑定士</li>
+              <li><svg aria-hidden="true"><use href="#icon-check"></use></svg>宅地建物取引士</li>
             </ul>
 
-            <h3>橘の仕事の進め方</h3>
+            <h2>橘の仕事の進め方</h2>
             <ul class="policy-list">
               <li>
-                <svg><use href="#icon-check"></use></svg>
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
                 <div>
                   <strong>必ず現地に足を運びます</strong>
                   <span>道路の付き方、隣地との関係、日当たりや周囲の音は、資料だけでは分かりません。現地で見たことを評価の根拠に含めます。</span>
                 </div>
               </li>
               <li>
-                <svg><use href="#icon-check"></use></svg>
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
                 <div>
                   <strong>専門用語を使わずにご説明します</strong>
                   <span>鑑定評価書は難しい言葉が並びます。何をどう見て、なぜその金額になったのかを、口頭でも書面でもかみ砕いてお伝えします。</span>
                 </div>
               </li>
               <li>
-                <svg><use href="#icon-check"></use></svg>
+                <svg aria-hidden="true"><use href="#icon-check"></use></svg>
                 <div>
                   <strong>ご依頼主に不利な材料も先にお伝えします</strong>
                   <span>ご期待の金額に届かない見込みがあるときは、着手前に正直にお話しします。あとから知るほうが困るからです。</span>
@@ -200,7 +197,7 @@
               </li>
             </ul>
 
-            <h3>事務所概要</h3>
+            <h2>事務所概要</h2>
             <table class="office-table">
               <tr><th>事務所名</th><td>たちばな不動産鑑定事務所</td></tr>
               <tr><th>代表者</th><td>橘 一真（不動産鑑定士）</td></tr>
@@ -220,7 +217,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

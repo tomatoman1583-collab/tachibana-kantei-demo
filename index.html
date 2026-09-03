@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ" aria-current="page">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-top" class="page active" data-page="top">
       <div class="hero container">
@@ -148,7 +145,7 @@
             <h1>人生の分かれ道にある不動産の適正価格を、専門家の視点で。</h1>
             <p class="hero-lead">相続で分けるとき、離婚で財産分与するとき、売る前に価格を確かめたいとき。感情や思い込みだけで決めない、公正な鑑定評価をご提案します。</p>
             <div class="hero-actions">
-              <a href="contact.html" class="btn btn-primary">無料相談を申し込む<svg><use href="#icon-arrow"></use></svg></a>
+              <a href="contact.html" class="btn btn-primary">無料相談を申し込む<svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
               <a href="services.html" class="btn btn-ghost">支援内容・料金を見る</a>
             </div>
           </div>
@@ -164,22 +161,22 @@
         </div>
         <div class="worry-grid">
           <div class="worry-card">
-            <svg class="worry-icon"><use href="#icon-inherit"></use></svg>
+            <svg class="worry-icon" aria-hidden="true"><use href="#icon-inherit"></use></svg>
             <h3>相続で不動産を分けたい</h3>
             <p>きょうだいで分けるにも、まず「今いくらか」が分からないと話が進みません。相続税申告にも使える鑑定評価書を作成します。</p>
-            <a href="services.html" class="worry-link">支援内容を見る<svg><use href="#icon-arrow"></use></svg></a>
+            <a href="services.html" class="worry-link">支援内容を見る<svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
           </div>
           <div class="worry-card">
-            <svg class="worry-icon"><use href="#icon-divorce"></use></svg>
+            <svg class="worry-icon" aria-hidden="true"><use href="#icon-divorce"></use></svg>
             <h3>離婚で財産分与したい</h3>
             <p>夫婦で築いた不動産を公平に分けるための基準が必要です。裁判所提出にも対応できる鑑定書で、話し合いの土台を作ります。</p>
-            <a href="services.html" class="worry-link">支援内容を見る<svg><use href="#icon-arrow"></use></svg></a>
+            <a href="services.html" class="worry-link">支援内容を見る<svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
           </div>
           <div class="worry-card">
-            <svg class="worry-icon"><use href="#icon-sale"></use></svg>
+            <svg class="worry-icon" aria-hidden="true"><use href="#icon-sale"></use></svg>
             <h3>売る前に適正価格を知りたい</h3>
             <p>不動産会社の査定だけで決めていませんか。第三者の専門家として、根拠のある価格をお伝えします。</p>
-            <a href="services.html" class="worry-link">支援内容を見る<svg><use href="#icon-arrow"></use></svg></a>
+            <a href="services.html" class="worry-link">支援内容を見る<svg aria-hidden="true"><use href="#icon-arrow"></use></svg></a>
           </div>
         </div>
       </div>
@@ -194,7 +191,7 @@
           <div class="target-card">
             <span class="target-badge">ご依頼の中心</span>
             <div class="target-head">
-              <svg class="target-icon"><use href="#icon-person"></use></svg>
+              <svg class="target-icon" aria-hidden="true"><use href="#icon-person"></use></svg>
               <h3>個人のお客様</h3>
             </div>
             <p>ご家族の間で不動産を分けるとき、その金額の根拠になる評価をお出しします。専門用語を使わずにご説明します。</p>
@@ -207,7 +204,7 @@
           <div class="target-card">
             <span class="target-badge">法人向け</span>
             <div class="target-head">
-              <svg class="target-icon"><use href="#icon-office"></use></svg>
+              <svg class="target-icon" aria-hidden="true"><use href="#icon-office"></use></svg>
               <h3>法人のお客様</h3>
             </div>
             <p>税務上の時価が問われる場面で、第三者としての評価を書面に残します。顧問税理士の方との打ち合わせにも同席します。</p>
@@ -220,7 +217,7 @@
           <div class="target-card">
             <span class="target-badge">専門家連携</span>
             <div class="target-head">
-              <svg class="target-icon"><use href="#icon-scale"></use></svg>
+              <svg class="target-icon" aria-hidden="true"><use href="#icon-scale"></use></svg>
               <h3>士業・専門家の方</h3>
             </div>
             <p>弁護士・税理士・司法書士の先生方からのご依頼です。提出先に合わせて、必要な形式と根拠を整えます。</p>
@@ -268,139 +265,21 @@
         </div>
         <div class="reason-grid">
           <div class="reason-item">
-            <svg class="reason-icon"><use href="#icon-court"></use></svg>
-            <div><h4>裁判所提出可能な鑑定書</h4><p>調停・訴訟でも使える正式な鑑定評価書を作成します。</p></div>
+            <svg class="reason-icon" aria-hidden="true"><use href="#icon-court"></use></svg>
+            <div><h3>裁判所提出可能な鑑定書</h3><p>調停・訴訟でも使える正式な鑑定評価書を作成します。</p></div>
           </div>
           <div class="reason-item">
-            <svg class="reason-icon"><use href="#icon-free"></use></svg>
-            <div><h4>相談・見積りは無料</h4><p>正式にご依頼いただくまで、費用は一切かかりません。</p></div>
+            <svg class="reason-icon" aria-hidden="true"><use href="#icon-free"></use></svg>
+            <div><h3>相談・見積りは無料</h3><p>正式にご依頼いただくまで、費用は一切かかりません。</p></div>
           </div>
           <div class="reason-item">
-            <svg class="reason-icon"><use href="#icon-fee"></use></svg>
-            <div><h4>明朗な料金（8万円〜）</h4><p>着手前に金額を確定してお伝えします。追加費用は発生しません。</p></div>
+            <svg class="reason-icon" aria-hidden="true"><use href="#icon-fee"></use></svg>
+            <div><h3>明朗な料金（8万円〜）</h3><p>着手前に金額を確定してお伝えします。追加費用は発生しません。</p></div>
           </div>
           <div class="reason-item">
-            <svg class="reason-icon"><use href="#icon-speed"></use></svg>
-            <div><h4>納品まで2〜4週間</h4><p>お問い合わせから最短3営業日でヒアリングにお伺いします。</p></div>
+            <svg class="reason-icon" aria-hidden="true"><use href="#icon-speed"></use></svg>
+            <div><h3>納品まで2〜4週間</h3><p>お問い合わせから最短3営業日でヒアリングにお伺いします。</p></div>
           </div>
-        </div>
-      </div>
-
-      <div class="ba-section section">
-        <div class="container">
-          <div class="section-head">
-            <span class="section-label" style="color:var(--white)">Before / After</span>
-            <h2 class="section-title">サイトはこう変わりました</h2>
-            <p class="section-sub">境界線を左右にドラッグして、見比べてみてください。</p>
-          </div>
-          <div class="ba-frame" id="baFrame">
-            <div class="ba-layer ba-after">
-              <div class="mock-after">
-                <div class="mock-chrome mock-chrome--new">
-                  <span class="mock-dot" style="background:#D3D9E3"></span>
-                  <span class="mock-dot" style="background:#D3D9E3"></span>
-                  <span class="mock-dot" style="background:#D3D9E3"></span>
-                  <span class="mock-url"><svg class="mock-lock"><use href="#icon-lock"></use></svg>tachibana-kantei.example</span>
-                </div>
-                <div class="mock-new-header">
-                  <span class="mock-new-logo"><svg><use href="#icon-mark"></use></svg>たちばな不動産鑑定事務所</span>
-                  <span class="mock-new-nav"><span>支援内容</span><span>解決事例</span><span>相談</span></span>
-                </div>
-                <div class="mock-new-hero">
-                  <span class="mock-new-eyebrow">相続・離婚・売却に強い</span>
-                  <p class="mock-new-heading">人生の分かれ道にある、<br>不動産の適正価格を。</p>
-                  <span class="mock-new-cta">無料相談を申し込む</span>
-                </div>
-                <div class="mock-new-cards">
-                  <div class="mock-new-card"><svg><use href="#icon-inherit"></use></svg><span>相続</span></div>
-                  <div class="mock-new-card"><svg><use href="#icon-divorce"></use></svg><span>離婚</span></div>
-                  <div class="mock-new-card"><svg><use href="#icon-sale"></use></svg><span>売却前</span></div>
-                </div>
-              </div>
-            </div>
-            <div class="ba-layer ba-before" id="baBefore">
-              <div class="mock-before">
-                <div class="mock-chrome mock-chrome--old">
-                  <span class="mock-dot"></span><span class="mock-dot"></span><span class="mock-dot"></span>
-                  <span class="mock-url">http://www.tachibana-kantei-old.example/</span>
-                </div>
-                <div class="mock-old-banner">
-                  <span class="mock-old-logo">たちばな不動産鑑定事務所</span>
-                  <span class="mock-old-tel">TEL 03-XXXX-XXXX</span>
-                </div>
-                <div class="mock-old-notice">無料相談受付中!! お気軽にどうぞ</div>
-                <div class="mock-old-nav">相続対策｜遺産分割｜譲渡所得｜借地権｜底地｜貸地｜賃料改定｜区分所有｜事業用地｜会社概要｜よくある質問｜アクセス｜お問い合わせ</div>
-                <div class="mock-old-body">
-                  <div class="mock-old-side">
-                    <div class="mock-old-side-title">業務案内</div>
-                    <ul>
-                      <li>相続対策</li>
-                      <li>遺産分割</li>
-                      <li>譲渡所得</li>
-                      <li>借地権</li>
-                      <li>賃料改定</li>
-                      <li>事業用地</li>
-                    </ul>
-                  </div>
-                  <div class="mock-old-main">
-                    <p class="mock-old-heading">各種鑑定評価・相続対策のご相談なら</p>
-                    <p class="mock-old-text">当事務所では不動産鑑定評価に関するあらゆるご相談を承っております。相続対策、遺産分割、譲渡所得、借地権、底地、貸地、賃料改定、区分所有建物、事業用地など、幅広い分野に対応しております。詳しくは各ページをご覧ください。</p>
-                    <table class="mock-old-table">
-                      <tr><td>2013/04/01</td><td>HPをリニューアルしました</td></tr>
-                      <tr><td>2012/11/10</td><td>年末年始の営業日のお知らせ</td></tr>
-                    </table>
-                  </div>
-                </div>
-                <div class="mock-old-footer">Copyright (C) 2013 たちばな不動産鑑定事務所 All Rights Reserved.</div>
-              </div>
-            </div>
-            <div class="ba-divider" id="baDivider">
-              <button type="button" class="ba-handle" id="baHandle" role="slider" aria-label="ビフォーアフター比較のスライダー" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-orientation="horizontal">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4"></path></svg>
-              </button>
-            </div>
-            <span class="ba-tag ba-tag-before">Before</span>
-            <span class="ba-tag ba-tag-after">After</span>
-          </div>
-          <p class="ba-caption">見た目を今風にしただけではありません。「依頼するかどうかを判断する材料」をページごとに足しています。</p>
-          <ul class="ba-improve">
-            <li>
-              <span class="ba-improve-label">誰向けのサイトか</span>
-              <span class="ba-improve-before">メニューを13個並べただけ</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">相続・離婚・売却前の3つの入口から選べる</span>
-            </li>
-            <li>
-              <span class="ba-improve-label">料金</span>
-              <span class="ba-improve-before">どこにも書かれていない</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">目安の金額と、料金が何で決まるかを明示</span>
-            </li>
-            <li>
-              <span class="ba-improve-label">実績</span>
-              <span class="ba-improve-before">文章の中に埋もれている</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">累計件数・分野の内訳を数字で提示</span>
-            </li>
-            <li>
-              <span class="ba-improve-label">依頼の判断材料</span>
-              <span class="ba-improve-before">なし</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">解決事例6件と、よくある質問8問</span>
-            </li>
-            <li>
-              <span class="ba-improve-label">納期</span>
-              <span class="ba-improve-before">書かれていない</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">物件の種類ごとの目安を表で提示</span>
-            </li>
-            <li>
-              <span class="ba-improve-label">スマートフォン</span>
-              <span class="ba-improve-before">横スクロールが必要</span>
-              <svg class="ba-improve-arrow"><use href="#icon-arrow"></use></svg>
-              <span class="ba-improve-after">指1本で最後まで操作できる</span>
-            </li>
-          </ul>
         </div>
       </div>
     </section>
@@ -410,7 +289,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

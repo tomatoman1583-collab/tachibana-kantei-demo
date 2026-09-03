@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-contact" class="page active" data-page="contact">
       <div class="section container">
@@ -149,12 +146,12 @@
         </div>
         <div class="contact-grid">
           <div class="contact-info-card">
-            <h3>お電話でのご相談</h3>
-            <p class="contact-phone"><svg><use href="#icon-phone"></use></svg>0120-XXX-XXX</p>
+            <h2>お電話でのご相談</h2>
+            <p class="contact-phone"><svg aria-hidden="true"><use href="#icon-phone"></use></svg>0120-XXX-XXX</p>
             <p class="contact-note">（見本表示のサンプル番号です）</p>
             <p class="contact-hours">受付時間 平日 9:00〜18:00（土日・祝日は事前予約で対応可）</p>
             <div class="contact-area">
-              <svg><use href="#icon-pin"></use></svg>
+              <svg aria-hidden="true"><use href="#icon-pin"></use></svg>
               <span>対応地域：東京都・神奈川県・埼玉県・千葉県（応相談）</span>
             </div>
           </div>
@@ -162,7 +159,7 @@
           <form class="contact-form" id="contactForm" novalidate>
             <div class="field">
               <label for="f-type">ご相談の種類<span class="req">必須</span></label>
-              <select id="f-type" required>
+              <select id="f-type" name="type" required>
                 <option value="">選択してください</option>
                 <option>相続の鑑定評価について</option>
                 <option>離婚・財産分与の鑑定評価について</option>
@@ -174,30 +171,30 @@
             <div class="form-row2">
               <div class="field">
                 <label for="f-name">お名前<span class="req">必須</span></label>
-                <input id="f-name" type="text" required autocomplete="name">
+                <input id="f-name" name="name" type="text" required autocomplete="name">
               </div>
               <div class="field">
                 <label for="f-tel">電話番号</label>
-                <input id="f-tel" type="tel" autocomplete="tel">
+                <input id="f-tel" name="tel" type="tel" autocomplete="tel">
               </div>
             </div>
             <div class="field">
               <label for="f-mail">メールアドレス<span class="req">必須</span></label>
-              <input id="f-mail" type="email" required autocomplete="email">
+              <input id="f-mail" name="email" type="email" required autocomplete="email">
             </div>
             <div class="field">
               <label for="f-msg">ご相談内容<span class="req">必須</span></label>
-              <textarea id="f-msg" required placeholder="対象不動産の所在地や、ご相談の背景など、分かる範囲でご記入ください。"></textarea>
+              <textarea id="f-msg" name="message" required placeholder="対象不動産の所在地や、ご相談の背景など、分かる範囲でご記入ください。"></textarea>
             </div>
             <div>
               <button type="submit" class="btn btn-primary">この内容で送信する</button>
-              <p class="form-note" style="margin-top:10px;">送信後、担当より1〜2営業日以内にご連絡いたします。</p>
+              <p class="form-note" style="margin-top:10px;">※本サイトはポートフォリオ用のデモのため、実際の送信・返信は行われません。送信後、担当より1〜2営業日以内にご連絡いたします。</p>
             </div>
           </form>
 
-          <div class="form-success" id="formSuccess" hidden style="grid-column:1 / -1;">
-            <svg><use href="#icon-check"></use></svg>
-            <h3 style="color:var(--navy-deep);">お問い合わせありがとうございます</h3>
+          <div class="form-success" id="formSuccess" hidden role="status" style="grid-column:1 / -1;">
+            <svg aria-hidden="true"><use href="#icon-check"></use></svg>
+            <h2 style="color:var(--navy-deep);">お問い合わせありがとうございます</h2>
             <p>内容を確認のうえ、担当より1〜2営業日以内にご連絡いたします。しばらくお待ちください。</p>
           </div>
         </div>
@@ -209,7 +206,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">

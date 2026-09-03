@@ -19,6 +19,7 @@
 </head>
 <body>
 <div class="site">
+<a href="#main" class="skip-link">本文へスキップ</a>
 <svg style="display:none" aria-hidden="true">
   <symbol id="icon-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M3 20V10l4-3 4 3v10"/>
@@ -92,10 +93,6 @@
   <symbol id="icon-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
     <path d="M5 12h13M13 6l6 6-6 6"/>
   </symbol>
-  <symbol id="icon-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-    <rect x="5" y="10.5" width="14" height="9" rx="1.4"/>
-    <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/>
-  </symbol>
   <symbol id="icon-office" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
     <path d="M4 20.5V5.4A1.4 1.4 0 0 1 5.4 4h7.2A1.4 1.4 0 0 1 14 5.4v15.1"/>
     <path d="M14 10.5h4.6A1.4 1.4 0 0 1 20 11.9v8.6"/>
@@ -123,7 +120,7 @@
 <header class="site-header">
     <div class="container header-inner">
       <a href="index.html" class="brand" aria-label="トップへ">
-        <svg class="brand-mark"><use href="#icon-mark"></use></svg>
+        <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
       <nav class="main-nav" aria-label="サイト内ナビゲーション">
@@ -138,7 +135,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
 <section id="page-services" class="page active" data-page="services">
       <div class="section container">
@@ -152,8 +149,9 @@
           <div class="service-card">
             <div>
               <span class="service-tag">相続</span>
-              <h3>相続用鑑定評価</h3>
+              <h2>相続用鑑定評価</h2>
               <p>相続税申告や遺産分割協議のための鑑定評価書を作成します。土地・建物・区分所有マンションに対応。</p>
+              <p>相続税の申告は原則として路線価等で評価するため、当事務所の鑑定評価は実態と合わない場合の裏付け資料としてご利用いただくのが一般的です。</p>
             </div>
             <div class="service-price">
               <span class="price-label">目安（税別）</span>
@@ -163,7 +161,7 @@
           <div class="service-card">
             <div>
               <span class="service-tag">離婚</span>
-              <h3>財産分与鑑定評価</h3>
+              <h2>財産分与鑑定評価</h2>
               <p>離婚時の財産分与・調停・訴訟で使える鑑定評価書を作成します。オーバーローン時の対応もご相談ください。</p>
             </div>
             <div class="service-price">
@@ -174,7 +172,7 @@
           <div class="service-card">
             <div>
               <span class="service-tag">売却前</span>
-              <h3>売却前の価格調査・鑑定評価</h3>
+              <h2>売却前の価格調査・鑑定評価</h2>
               <p>売却前に適正価格を確認したい方向けに、簡易な価格調査書から裁判所提出にも使える正式な鑑定評価書までご用意しています。</p>
             </div>
             <div class="service-price">
@@ -190,7 +188,7 @@
           </div>
         </div>
 
-        <h3 style="color:var(--navy-deep);font-size:1.05rem;margin-bottom:16px;">料金の目安一覧</h3>
+        <h2 style="color:var(--navy-deep);font-size:1.05rem;margin-bottom:16px;">料金の目安一覧</h2>
         <div class="table-scroll">
           <table class="fee-table">
             <thead>
@@ -207,26 +205,26 @@
         <p class="fee-note">上記は一般的な戸建て・マンション1件あたりの目安です。事業用地・大規模物件・現地調査の日数によって変動する場合があります。正式なお見積りは初回相談の際に無料でご案内します。</p>
 
         <div class="sub-block">
-          <h3>料金は何で決まるのか</h3>
+          <h2>料金は何で決まるのか</h2>
           <div class="basis-grid">
             <div class="basis-item">
               <span class="basis-num">01</span>
-              <h4>物件の種類</h4>
+              <h3>物件の種類</h3>
               <p>土地・建物・区分所有マンション・収益物件など、種類によって必要な調査が変わります。</p>
             </div>
             <div class="basis-item">
               <span class="basis-num">02</span>
-              <h4>規模</h4>
+              <h3>規模</h3>
               <p>面積や棟数が大きいほど、確認する資料と検討する事項が増えます。</p>
             </div>
             <div class="basis-item">
               <span class="basis-num">03</span>
-              <h4>権利関係の複雑さ</h4>
+              <h3>権利関係の複雑さ</h3>
               <p>借地権・底地・共有など、権利が分かれている物件は評価の手順が増えます。</p>
             </div>
             <div class="basis-item">
               <span class="basis-num">04</span>
-              <h4>現地調査に必要な日数</h4>
+              <h3>現地調査に必要な日数</h3>
               <p>物件の場所や件数によって、現地に伺う回数と日数が変わります。</p>
             </div>
           </div>
@@ -240,7 +238,7 @@
 <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <svg><use href="#icon-mark"></use></svg>
+        <svg aria-hidden="true"><use href="#icon-mark"></use></svg>
         たちばな不動産鑑定事務所
       </div>
       <nav class="footer-nav" aria-label="フッターナビゲーション">
