@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ご相談の流れ｜たちばな不動産鑑定事務所</title>
 <meta name="description" content="お問い合わせから納品まで、物件の種類により2〜4週間程度です。ご相談の流れと必要書類をご案内します。">
@@ -115,6 +116,12 @@
     <path d="M12 11.2v5"/>
     <path d="M12 7.9v.2"/>
   </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M4 7h16M4 12h16M4 17h16"/>
+  </symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M6 6l12 12M18 6 6 18"/>
+  </symbol>
 </svg>
 
 <header class="site-header">
@@ -123,7 +130,11 @@
         <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
-      <nav class="main-nav" aria-label="サイト内ナビゲーション">
+      <button type="button" class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="メニュー">
+        <svg class="nav-toggle-icon nav-toggle-open" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        <svg class="nav-toggle-icon nav-toggle-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="サイト内ナビゲーション">
         <a href="services.html" class="nav-link">支援内容・料金</a>
         <a href="cases.html" class="nav-link">解決事例</a>
         <a href="flow.html" class="nav-link is-current" aria-current="page">ご相談の流れ</a>

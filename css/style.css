@@ -80,13 +80,38 @@
   .nav-link.is-current{background:var(--gold);color:var(--white);}
   .nav-cta{padding:9px 15px;border-radius:2px;background:var(--navy-deep);color:var(--white);font-size:.8rem;font-weight:600;white-space:nowrap;transition:background .2s;}
   .nav-cta:hover{background:var(--gold);}
+  /* ハンバーガーボタン。980px以上は display:none のままなので、見た目もタブ順も従来どおり。
+     開閉アイコンの出し分けは aria-expanded を直接見るので、JS側は属性を1回書き換えるだけで済む */
+  .nav-toggle{display:none;width:44px;height:44px;align-items:center;justify-content:center;border-radius:2px;color:var(--navy-deep);flex-shrink:0;transition:background .2s;}
+  .nav-toggle:hover{background:var(--paper-alt);}
+  .nav-toggle-icon{width:22px;height:22px;}
+  .nav-toggle[aria-expanded="false"] .nav-toggle-close,
+  .nav-toggle[aria-expanded="true"] .nav-toggle-open{display:none;}
   /* brand + CTA を1行目、navを2行目へ。デスクトップ1行に収まる979px以下すべてに適用する
-     （640px以下だけに当てると641〜979pxで3段に折り返し、モバイルより背が高くなる） */
-  @media (max-width:979px){
-    .header-inner{gap:8px 10px;padding-block:10px;}
-    .brand{order:1;}
+     （640px以下だけに当てると641〜979pxで3段に折り返し、モバイルより背が高くなる）
+     979px以下では nav を開閉式にする。ヘッダーは position:sticky なので、ドロップダウンを
+     絶対配置にすると本文へ重なる。ヘッダー内のフローに2段目として展開し、本文は押し下げる。
+     開閉に関わる宣言はすべて .js（＝JSが有効なときだけ付く）を前置し、JS無効時は
+     ボタンが出ず nav が従来どおり折り返しで並ぶ状態へ戻す */
+  /* 上限を 979.98px にしているのは、ディスプレイ拡大率が125%等のとき CSS ピクセル幅が
+     979.2 のような小数になり、max-width:979px と min-width:980px のどちらにも当たらない
+     0.98px の隙間ができるため（実測: dpr1.25・innerWidth 979 で両方 false）。
+     整数幅での挙動は 979px 指定のときと変わらない */
+  @media (max-width:979.98px){
+    /* CTAとボタンを右端に寄せる。space-between のままだと、ボタンが2段目へ折り返す狭い画面
+       （実測: 430px以下）で2段目の左端に取り残される。brand の margin-right:auto で
+       1段に収まる幅では [brand] …… [CTA][ボタン]、折り返す幅では CTA の右端とボタンの右端が揃う */
+    .header-inner{gap:8px 10px;padding-block:10px;justify-content:flex-end;}
+    .brand{order:1;margin-right:auto;}
     .nav-cta{order:2;}
-    .main-nav{order:3;width:100%;gap:2px 3px;}
+    .js .nav-toggle{order:3;display:flex;}
+    .main-nav{order:4;width:100%;gap:2px 3px;}
+    .js .main-nav{display:none;flex-direction:column;align-items:stretch;gap:0;padding-bottom:4px;}
+    .js .main-nav.is-open{display:flex;}
+    /* タップ領域を44px以上に。640px以下の .nav-link{padding:6px 7px;font-size:.76rem} より
+       詳細度が高いので、狭い画面でも縮まない */
+    .js .main-nav .nav-link{min-height:44px;display:flex;align-items:center;padding:8px 10px;font-size:.85rem;border-bottom:1px solid var(--line);}
+    .js .main-nav .nav-link:last-child{border-bottom:none;}
   }
   @media (max-width:640px){
     .brand-mark{width:24px;height:24px;}

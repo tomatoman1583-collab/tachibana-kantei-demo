@@ -2,6 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add("js");</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>たちばな不動産鑑定事務所</title>
 <meta name="description" content="相続で分けるとき、離婚で財産分与するとき、売る前に価格を確かめたいとき。感情や思い込みだけで決めない、公正な鑑定評価をご提案します。">
@@ -115,6 +116,12 @@
     <path d="M12 11.2v5"/>
     <path d="M12 7.9v.2"/>
   </symbol>
+  <symbol id="icon-menu" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M4 7h16M4 12h16M4 17h16"/>
+  </symbol>
+  <symbol id="icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
+    <path d="M6 6l12 12M18 6 6 18"/>
+  </symbol>
 </svg>
 
 <header class="site-header">
@@ -123,7 +130,11 @@
         <svg class="brand-mark" aria-hidden="true"><use href="#icon-mark"></use></svg>
         <span class="brand-name">たちばな不動産鑑定事務所</span>
       </a>
-      <nav class="main-nav" aria-label="サイト内ナビゲーション">
+      <button type="button" class="nav-toggle" id="navToggle" aria-controls="mainNav" aria-expanded="false" aria-label="メニュー">
+        <svg class="nav-toggle-icon nav-toggle-open" aria-hidden="true"><use href="#icon-menu"></use></svg>
+        <svg class="nav-toggle-icon nav-toggle-close" aria-hidden="true"><use href="#icon-close"></use></svg>
+      </button>
+      <nav class="main-nav" id="mainNav" aria-label="サイト内ナビゲーション">
         <a href="services.html" class="nav-link">支援内容・料金</a>
         <a href="cases.html" class="nav-link">解決事例</a>
         <a href="flow.html" class="nav-link">ご相談の流れ</a>
@@ -149,7 +160,16 @@
               <a href="services.html" class="btn btn-ghost">支援内容・料金を見る</a>
             </div>
           </div>
-          <img class="hero-photo" src="assets/hero-tachibana.jpg" alt="ガラス張りのオフィスビルを見上げた外観" width="2400" height="1800" loading="eager">
+          <!-- sizes は getBoundingClientRect() による実測レイアウトから逆算した値。
+               1120px以上=457px固定（.container の max-width で頭打ち）／901〜1119px=2カラムの右列
+               （コンテナ内側から gap 56px を引き 0.9/2.0 で按分）／641〜900px=1カラムでコンテナ幅
+               （左右padding 24px）／640px以下=同（左右padding 20px）。
+               WebP非対応ブラウザは <img> 側のJPEG（srcset、非対応なら src）を読む。
+               元の assets/hero-tachibana.jpg（2400×1800）はオリジナルとして残し、OGP画像で使用。 -->
+          <picture>
+            <source type="image/webp" sizes="(min-width:1120px) 457px, (min-width:901px) calc((100vw - 104px) * 0.45), (min-width:641px) calc(100vw - 48px), calc(100vw - 40px)" srcset="assets/hero-tachibana-420.webp 420w, assets/hero-tachibana-560.webp 560w, assets/hero-tachibana-720.webp 720w, assets/hero-tachibana-900.webp 900w, assets/hero-tachibana-1200.webp 1200w, assets/hero-tachibana-1600.webp 1600w">
+            <img class="hero-photo" src="assets/hero-tachibana-1200.jpg" sizes="(min-width:1120px) 457px, (min-width:901px) calc((100vw - 104px) * 0.45), (min-width:641px) calc(100vw - 48px), calc(100vw - 40px)" srcset="assets/hero-tachibana-420.jpg 420w, assets/hero-tachibana-560.jpg 560w, assets/hero-tachibana-720.jpg 720w, assets/hero-tachibana-900.jpg 900w, assets/hero-tachibana-1200.jpg 1200w, assets/hero-tachibana-1600.jpg 1600w" alt="ガラス張りのオフィスビルを見上げた外観" width="2400" height="1800" loading="eager">
+          </picture>
         </div>
       </div>
 
