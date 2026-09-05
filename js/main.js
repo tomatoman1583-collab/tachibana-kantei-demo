@@ -40,6 +40,12 @@
     var syncDesktop = function(){ if (desktop.matches) setOpen(false); };
     if (desktop.addEventListener) { desktop.addEventListener("change", syncDesktop); }
     else if (desktop.addListener) { desktop.addListener(syncDesktop); }
+
+    // ここまで到達＝ハンバーガーが実際に開閉できる状態。CSS がナビを隠す条件
+    // （.js.navjs .main-nav{display:none}）をこのクラスに依存させているので、
+    // このファイルが読めなかった場合・途中で例外が出た場合は、ナビが従来どおり
+    // 折り返しで並んだまま残り、6本のリンクが到達不能になることがない。
+    document.documentElement.classList.add("navjs");
   }
 
   // ---- contact form mock submit ----

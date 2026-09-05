@@ -91,8 +91,12 @@
      （640px以下だけに当てると641〜979pxで3段に折り返し、モバイルより背が高くなる）
      979px以下では nav を開閉式にする。ヘッダーは position:sticky なので、ドロップダウンを
      絶対配置にすると本文へ重なる。ヘッダー内のフローに2段目として展開し、本文は押し下げる。
-     開閉に関わる宣言はすべて .js（＝JSが有効なときだけ付く）を前置し、JS無効時は
-     ボタンが出ず nav が従来どおり折り返しで並ぶ状態へ戻す */
+     ナビを隠す宣言には .js.navjs を前置する。.navjs は js/main.js のハンバーガー初期化が
+     成功した時点で付くので、main.js が 404・拡張機能によるブロック・実行時エラーで動かなかった
+     場合は nav が従来どおり折り返しで並び、6本のリンクへ到達できなくなることがない
+     （.js だけを条件にすると「ボタンは出るが押しても何も起きず、ナビが到達不能」になる）。
+     ボタンの表示条件は .js のままにしてある（.navjs にすると main.js の読み込み待ちで
+     ボタンがちらつくため）。JS無効時は .js 自体が付かないので、従来どおり折り返し表示になる */
   /* 上限を 979.98px にしているのは、ディスプレイ拡大率が125%等のとき CSS ピクセル幅が
      979.2 のような小数になり、max-width:979px と min-width:980px のどちらにも当たらない
      0.98px の隙間ができるため（実測: dpr1.25・innerWidth 979 で両方 false）。
@@ -106,18 +110,47 @@
     .nav-cta{order:2;}
     .js .nav-toggle{order:3;display:flex;}
     .main-nav{order:4;width:100%;gap:2px 3px;}
-    .js .main-nav{display:none;flex-direction:column;align-items:stretch;gap:0;padding-bottom:4px;}
-    .js .main-nav.is-open{display:flex;}
+    .js.navjs .main-nav{display:none;flex-direction:column;align-items:stretch;gap:0;padding-bottom:4px;}
+    .js.navjs .main-nav.is-open{display:flex;}
     /* タップ領域を44px以上に。640px以下の .nav-link{padding:6px 7px;font-size:.76rem} より
        詳細度が高いので、狭い画面でも縮まない */
-    .js .main-nav .nav-link{min-height:44px;display:flex;align-items:center;padding:8px 10px;font-size:.85rem;border-bottom:1px solid var(--line);}
-    .js .main-nav .nav-link:last-child{border-bottom:none;}
+    .js.navjs .main-nav .nav-link{min-height:44px;display:flex;align-items:center;padding:8px 10px;font-size:.85rem;border-bottom:1px solid var(--line);}
+    .js.navjs .main-nav .nav-link:last-child{border-bottom:none;}
   }
   @media (max-width:640px){
     .brand-mark{width:24px;height:24px;}
     .brand-name{font-size:.82rem;}
     .nav-link{padding:6px 7px;font-size:.76rem;}
     .nav-cta{padding:8px 11px;font-size:.75rem;}
+  }
+  /* 430px以下では [ロゴ+屋号][無料相談を申し込む][☰] が1行に入らず、☰だけが2段目へ落ちる。
+     実測: 必要幅 = 屋号190.4 + CTA130 + ☰44 + 列gap10×2 = 384.4px に対し、
+     375px端末の利用可能幅は 375 − .container の左右padding40 = 335.2px しかない
+     （1段に収まるのは viewport 424.5px 以上＝430pxだけ）。
+     文字サイズと44pxのタップ領域はそのままに、次の2点だけで幅を詰めて320pxまで1段に保つ。
+     ① CTAの「を申し込む」を視覚的にのみ隠し、表示上は「無料相談」にする（130→70px）
+     ② 屋号を「たちばな」「不動産鑑定事務所」の2ブロックに分け、入らない幅では2行に折り返す
+     ②で inline-block の2ブロックに分けるのは、和文は任意の位置で改行できるため、
+     素のまま折り返すと「たちばな不動産鑑定事務／所」のように1文字だけ取り残されるから。
+     2行になっても 2行 × line-height1.25 × 13.12px = 32.8px で☰の44pxを超えないので、
+     ヘッダーの高さは☰が決めたまま（約64.8px）変わらない。
+     上限を 430.98px にしているのは、拡大率125%等で CSS ピクセル幅が 430.4 のような小数に
+     なる端末を取りこぼさないため。430.4px を旧レイアウトのまま通すと余裕が約6pxしか残らず、
+     フォントがフォールバックした場合に再び2段へ落ちる。整数幅での挙動は 430px 指定と同じ */
+  @media (max-width:430.98px){
+    .header-inner{column-gap:8px;}
+    /* flex-wrap:wrap の行分割は「縮める前に折り返す」ため、flex-shrink を許すだけでは
+       ☰が2段目へ落ちるのを止められない（実測: 320pxで brand は190.45pxのまま2段になった）。
+       flex-basis:0 にして brand の仮の幅を0にし、行分割の判定から屋号の実寸を外す。
+       実際の幅は flex-grow が残り幅を配って決め、max-content で上限を屋号の実寸に留める
+       （＝広い幅ではリンクの当たり判定が伸びず、余りは margin-right:auto が吸って
+       CTAと☰が右端に揃う従来どおりの見え方になる） */
+    .brand{flex:1 1 0;min-width:0;max-width:max-content;}
+    .brand-name{white-space:normal;line-height:1.25;}
+    .brand-name>span{display:inline-block;}
+    /* 「を申し込む」は視覚的に隠すだけで、リンクのアクセシブル名は「無料相談を申し込む」のまま。
+       見えているラベル「無料相談」がアクセシブル名に含まれる形なので WCAG 2.5.3 を満たす */
+    .nav-cta-tail{position:absolute;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap;}
   }
 
   /* buttons */
