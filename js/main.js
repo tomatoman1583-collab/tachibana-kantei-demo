@@ -41,11 +41,16 @@
     if (desktop.addEventListener) { desktop.addEventListener("change", syncDesktop); }
     else if (desktop.addListener) { desktop.addListener(syncDesktop); }
 
-    // ここまで到達＝ハンバーガーが実際に開閉できる状態。CSS がナビを隠す条件
-    // （.js.navjs .main-nav{display:none}）をこのクラスに依存させているので、
-    // このファイルが読めなかった場合・途中で例外が出た場合は、ナビが従来どおり
-    // 折り返しで並んだまま残り、6本のリンクが到達不能になることがない。
+    // ここまで到達＝ハンバーガーが実際に開閉できる状態。head内インラインが仕掛けた
+    // 2秒タイマーは .navjs が付いていなければ .nojsnav（折り返し表示へ戻すフォールバック）
+    // を付けるので、ここで名乗ることでタイマーは何もしないまま終わる。このファイルが
+    // 読めなかった場合・途中で例外が出た場合は名乗れず、フォールバックが働いて
+    // 6本のリンクが到達不能になることがない。
     document.documentElement.classList.add("navjs");
+    // 回線が遅く2秒を超えると、タイマーが先に発火したあとにこのファイルが遅れて届く。
+    // その状態を放置すると折り返しナビとハンバーガーが同時に出るので、フォールバックを
+    // 取り消してハンバーガー方式へ戻す。付いていなければ no-op。
+    document.documentElement.classList.remove("nojsnav");
   }
 
   // ---- contact form mock submit ----
