@@ -416,3 +416,10 @@
 
   /* hero photo (2026-09-01 複数ページ化: ヒーローSVGイラストを実写真に差し替え。既存宣言は無変更) */
   .hero-photo{width:100%;height:auto;border-radius:var(--radius-lg);}
+
+  /* page banner (2026-09-06 追加: 解決事例・代表紹介・お問い合わせの3ページだけに置くヘッダー帯。
+     新しい色・角丸・影は足さず、hero-photo と同じ var(--radius-lg)=2px のみ。
+     画像自体を 16:5 に切り出してあるので aspect-ratio / object-fit は使わない） */
+  .page-banner{margin:0 0 36px;}
+  .page-banner img{width:100%;height:auto;border-radius:var(--radius-lg);}
+  @media (max-width:640px){.page-banner{margin-bottom:24px;}}

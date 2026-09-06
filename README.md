@@ -12,13 +12,15 @@
 |---|---|
 | [トップ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/) | ヒーロー・よくある3つのご相談・想定する依頼者・査定と鑑定評価の違い・選ばれる理由 |
 | [支援内容・料金](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/services.html) | 3メニューの内容と料金目安 |
-| [解決事例](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/cases.html) | 架空設定の解決事例6件 |
+| [解決事例](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/cases.html) | ヘッダー写真・架空設定の解決事例6件 |
 | [ご相談の流れ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/flow.html) | 5ステップと納期の目安・必要書類 |
 | [よくある質問](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/faq.html) | よくある質問8問 |
-| [代表紹介・事務所概要](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/about.html) | 代表者プロフィール・実績数値・事務所概要 |
-| [お問い合わせ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/contact.html) | お問い合わせフォーム（送信はモック） |
+| [代表紹介・事務所概要](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/about.html) | ヘッダー写真・代表者プロフィール・実績数値・事務所概要 |
+| [お問い合わせ](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/contact.html) | ヘッダー写真・お問い合わせフォーム（送信はモック） |
 | [改善レポート（前後比較）](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/compare.html) | 改善前後をスライダーで見比べられる記録 |
 | [改善レポート（詳細版）](https://tomatoman1583-collab.github.io/tachibana-kantei-demo/compare-shosai.html) | レスポンシブ検証・数値の一覧 |
+
+実写真はトップのヒーロー1点と、解決事例・代表紹介・お問い合わせの3ページのヘッダー帯1点ずつの計4点です。それ以外の図版はすべてインラインSVGです。
 
 制作の方針・想定ペルソナ・判断基準は [`AGENTS.md`](AGENTS.md)、使用写真の出典は [`CREDITS.md`](CREDITS.md) を参照してください。
 
